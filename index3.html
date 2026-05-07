@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Classmate - ICT 10 Emerald</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.8.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.8.1/core.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+            background-color: #0a1f44;
+            color: white;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        nav {
+             background-color: #ffd700;
+             padding: 15px;
+             display: flex;
+             justify-content: center;
+             gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #0a1f44;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #06142e;
+            padding: 30px;
+            border-radius: 15px;
+            border: 2px solid #ffd700;
+        }
+
+        h1, h2 { color: #ffd700; }
+
+        .form-control {
+            background-color: #0a1f44;
+            border: 1px solid #ffd700;
+            color: white;
+        }
+
+        .form-control:focus {
+            background-color: #0d2a5c;
+            color: white;
+            border-color: white;
+            box-shadow: none;
+        }
+
+        .btn-gold {
+            background-color: #ffd700;
+            color: #0a1f44;
+            font-weight: bold;
+            border-radius: 30px;
+            padding: 10px 25px;
+            border: none;
+        }
+
+        .btn-gold:hover {
+            background-color: white;
+            color: #0a1f44;
+        }
+
+        .intro-card {
+            padding: 15px;
+            margin-top: 15px;
+            background: rgba(255, 215, 0, 0.1);
+            border-left: 5px solid #ffd700;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #06142e;
+            font-size: 14px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index5.html">Achievements</a>
+    <a href="index4.html">Classmates</a>
+    <a href="index2.html">Attendance</a>
+    <a href="index.html">Home</a>
+    <a href="index3.html">Add Classmate</a>
+</nav>
+
+<div class="container">
+    <div class="form-container shadow-lg">
+        <h1 class="text-center mb-4">Register Classmate</h1>
+        
+        <form>
+            <div class="mb-3">
+                <label class="form-label">Full Name</label>
+                <input id="name" type="text" class="form-control" placeholder="Enter name..." />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Section</label>
+                <input id="section" type="text" class="form-control" placeholder="Enter section..." />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Favorite Subject</label>
+                <input id="favorite_subject" type="text" class="form-control" placeholder="e.g. ICT, Math, Science" />
+            </div>
+            
+            <div class="d-grid gap-2">
+                <button type="button" class="btn btn-gold" py-click="add_classmate">Add to Emerald Database</button>
+                <button type="button" class="btn btn-outline-light mt-2" py-click="show_intro">Refresh List</button>
+            </div>
+        </form>
+
+        <p id="message" class="text-center mt-3" style="color: #ffd700; font-weight: bold;"></p>
+
+        <hr style="border-color: #ffd700;">
+        
+        <h2 class="text-center h4">Recently Added</h2>
+        <div id="output">
+            </div>
+    </div>
+</div>
+
+<script type="py" src="main3.py"></script>
+
+<footer>
+    © 2026 ICT 10-Emerald | Fairview Project
+</footer>
+
+</body>
+</html>
